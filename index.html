@@ -15,10 +15,6 @@
     />
     <!-- header links -->
     <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=1234567890"
-    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -229,9 +225,13 @@
   <!-- slider JS ENDS -->
 
   <!-- content JS -->
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=1234567890"
-  ></script>
+    <script>
+      setTimeout(() => {
+        const script = document.createElement("script");
+        script.src = "https://www.googletagmanager.com/gtag/js?id=1234567890";
+        script.async = true;
+        document.head.appendChild(script);
+      }, 2000);
+    </script>
   <script src="content.js" type="module"></script>
 </html>
