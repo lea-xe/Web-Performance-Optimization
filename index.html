@@ -14,16 +14,6 @@
       sizes="16x16"
     />
     <!-- header links -->
-    <!-- Google tag (gtag.js) -->
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "TAG_ID");
-    </script>
     <script src="https://kit.fontawesome.com/4a3b1f73a2.js"></script>
     <link
       href="https://fonts.googleapis.com/css?family=Lato&display=swap"
@@ -141,7 +131,7 @@
     </div>
 
     <div style="max-width: 90vw; margin-inline: auto">
-      <iframe
+      <!-- <iframe
         width="560"
         height="315"
         src="https://www.youtube-nocookie.com/embed/YOuPX_qHHDs?si=Jb2-OSHqObUJgTRG"
@@ -151,7 +141,7 @@
         referrerpolicy="strict-origin-when-cross-origin"
         allowfullscreen
         loading="lazy"
-      ></iframe>
+      ></iframe> -->
 
       <h3>Scan and win</h3>
       <p>Scan the QR code to win exciting prizes!</p>
@@ -204,12 +194,20 @@
 
   <!-- content JS -->
     <script>
-      setTimeout(() => {
-        const script = document.createElement("script");
-        script.src = "https://www.googletagmanager.com/gtag/js?id=1234567890";
-        script.async = true;
-        document.head.appendChild(script);
-      }, 2000);
-    </script>
+    const script = document.createElement("script");
+    script.src = "https://www.googletagmanager.com/gtag/js?id=1234567890";
+    script.async = true;
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    setTimeout(() => {
+      document.head.appendChild(script);
+      window.dataLayer = window.dataLayer || [];
+      gtag("js", new Date());
+      gtag("config", "TAG_ID");
+    }, 2000);
+  </script>
   <script src="content.js" type="module"></script>
 </html>
