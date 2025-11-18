@@ -6,10 +6,6 @@ module.exports = defineConfig({
   plugins: [
     viteStaticCopy({
       targets: [
-        { src: "header.html", dest: "" },
-        { src: "slider.html", dest: "" },
-        { src: "content.html", dest: "" },
-        { src: "footer.html", dest: "" },
         { src: "img/*", dest: "img/" },
         { src: "css/*", dest: "css/" },
       ],

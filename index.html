@@ -44,6 +44,9 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
     />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/header.css" />
+     <link rel="stylesheet" href="css/content.css">
         <style>
       body {
         margin: 0;
@@ -76,16 +79,45 @@
 
   <body>
     <!-- HEADER -->
-    <div id="1"></div>
-    <script>
-      load("header.html");
-      function load(url) {
-        req = new XMLHttpRequest();
-        req.open("GET", url, false);
-        req.send(null);
-        document.getElementById(1).innerHTML = req.responseText;
-      }
-    </script>
+  <header>
+      <section>
+        <!-- MAIN CONTAINER -->
+        <div id="container">
+          <!-- SHOP NAME -->
+          <div id="shopName">
+            <a href="index.html"> <b>SHOP</b>LANE </a>
+          </div>
+          <!-- COLLCETIONS ON WEBSITE -->
+          <div id="collection">
+            <div id="clothing"><a href="clothing.html"> CLOTHING </a></div>
+            <div id="accessories">
+              <a href="accessories.html"> ACCESSORIES </a>
+            </div>
+          </div>
+          <!-- SEARCH SECTION -->
+          <div id="search">
+            <i class="fas fa-search search"></i>
+            <input
+              type="text"
+              id="input"
+              name="searchBox"
+              placeholder="Search for Clothing and Accessories"
+            />
+          </div>
+          <!-- USER SECTION (CART AND USER ICON) -->
+          <div id="user">
+            <a href="#">
+              <i class="fas fa-shopping-cart addedToCart"
+                ><div id="badge">0</div></i
+              ></a
+            >
+            <a href="#" aria-label="Profile">
+              <i class="fas fa-user-circle userIcon"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    </header>
     <!-- SLIDER -->
     <section>
       <div id="containerSlider">
@@ -105,16 +137,18 @@
     </section>
 
     <!-- CONTENT SECTION -->
-    <div id="3"></div>
-    <script>
-      load("content.html");
-      function load(url) {
-        req = new XMLHttpRequest();
-        req.open("GET", url, false);
-        req.send(null);
-        document.getElementById(3).innerHTML = req.responseText;
-      }
-    </script>
+    <div id="mainContainer">
+
+        <h1> clothing for men and women </h1>
+        <div id="containerClothing">
+            <!-- JS rendered code -->
+        </div>
+
+        <h1> accessories for men and women </h1>
+        <div id="containerAccessories">
+            <!-- JS rendered code -->
+        </div>
+    </div>
 
     <div style="max-width: 90vw; margin-inline: auto">
       <iframe
@@ -126,6 +160,7 @@
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
         allowfullscreen
+        loading="lazy"
       ></iframe>
 
       <h3>Scan and win</h3>
@@ -134,16 +169,47 @@
     </div>
 
     <!-- FOOTER -->
-    <div id="4"></div>
-    <script>
-      load("footer.html");
-      function load(url) {
-        req = new XMLHttpRequest();
-        req.open("GET", url, false);
-        req.send(null);
-        document.getElementById(4).innerHTML = req.responseText;
-      }
-    </script>
+    <footer>
+      <section>
+        <div id="containerFooter">
+          <div id="webFooter">
+            <h3>online store</h3>
+            <p>men clothing</p>
+            <p>women clothing</p>
+            <p>men accessories</p>
+            <p>women accessories</p>
+          </div>
+          <div id="webFooter">
+            <h3>helpful link</h3>
+            <p>home</p>
+            <p>about</p>
+            <p>contact</p>
+          </div>
+          <div id="webFooter">
+            <h3>partners</h3>
+            <p>zara</p>
+            <p>pantaloons</p>
+            <p>levis</p>
+            <p>ucb</p>
+            <p>+ many more</p>
+          </div>
+          <div id="webFooter">
+            <h3>address</h3>
+            <p>building 101</p>
+            <p>central avenue</p>
+            <p>la - 902722</p>
+            <p>united states</p>
+          </div>
+        </div>
+        <div id="credit">
+          <a href="https://linkedin.com/in/priyanka-sharma-b79401142">
+            © Priyanka Sharma
+          </a>
+          &nbsp; | &nbsp;
+          <a href="https://www.edyoda.com/" target="_blank"> EDYODA </a>
+        </div>
+      </section>
+    </footer>
   </body>
 
   <!-- slider JS START -->
