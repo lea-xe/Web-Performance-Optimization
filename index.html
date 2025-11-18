@@ -32,14 +32,6 @@
     <!-- slider links -->
     <!-- <script src="http://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
-    />
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/header.css" />
      <link rel="stylesheet" href="css/content.css">
@@ -48,11 +40,13 @@
         margin: 0;
       }
       #containerSlider {
-        margin: auto;
-        width: 90%;
-        text-align: center;
-        padding-top: 100px;
-        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: repeat(4, 100%);
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+      }
+      .slidingImage {
+        scroll-snap-align: start;
       }
       #containerSlider img {
         width: 100%;
@@ -207,22 +201,6 @@
       </section>
     </footer>
   </body>
-
-  <!-- slider JS START -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      $("#containerSlider").slick({
-        dots: true,
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 1500,
-      });
-    });
-  </script>
-  <!-- slider JS ENDS -->
 
   <!-- content JS -->
     <script>
