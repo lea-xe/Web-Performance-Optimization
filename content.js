@@ -39,7 +39,7 @@ function dynamicClothingSection(ob) {
   detailsDiv.appendChild(h4);
   detailsDiv.appendChild(h2);
 
-  boxDiv.onclick = function (event) {
+  boxDiv.onclick = async function (event) {
     event.preventDefault();
     boxDiv.style.opacity = "0.7";
 
@@ -97,6 +97,7 @@ function dynamicClothingSection(ob) {
         relatedImg.style.border = "3px solid black";
         void relatedImg.getBoundingClientRect();
 
+        await globalThis.scheduler?.yield();
         QRCode.toCanvas(
           canvas,
           window.location.origin + "/contentDetails.html?" + ob.id
