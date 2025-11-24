@@ -97,7 +97,7 @@ function dynamicClothingSection(ob) {
 
         await globalThis.scheduler?.yield();
 
-        import ("qrcode").then((QRCode) => {
+        import("qrcode").then((QRCode) => {
           QRCode.toCanvas(
             canvas,
             window.location.origin + "/contentDetails.html?" + ob.id
@@ -177,7 +177,9 @@ httpRequest.send();
 
 var canvas = document.getElementById("qrcode-canvas");
 
+import("qrcode").then((QRCode) => {
 QRCode.toCanvas(canvas, "https://google.com", function (error) {
   if (error) console.error(error);
   console.log("success!");
+});
 });
