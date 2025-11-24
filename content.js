@@ -1,5 +1,3 @@
-import QRCode from "qrcode";
-
 let contentTitle;
 
 console.log(document.cookie);
@@ -98,10 +96,13 @@ function dynamicClothingSection(ob) {
         void relatedImg.getBoundingClientRect();
 
         await globalThis.scheduler?.yield();
-        QRCode.toCanvas(
-          canvas,
-          window.location.origin + "/contentDetails.html?" + ob.id
-        );
+
+        import ("qrcode").then((QRCode) => {
+          QRCode.toCanvas(
+            canvas,
+            window.location.origin + "/contentDetails.html?" + ob.id
+          );
+        });
       }
       dialog.appendChild(canvas);
     }
