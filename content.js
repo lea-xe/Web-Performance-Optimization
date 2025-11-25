@@ -13,7 +13,7 @@ function dynamicClothingSection(ob) {
   let imgTag = document.createElement("img");
   // imgTag.id = 'image1'
   // imgTag.id = ob.photos
-  imgTag.src = ob.preview.replace("h_1440,q_100,w_1080", "h_598,q_70,w_488");
+  imgTag.src = ob.preview.replace("h_1440,q_100,w_1080", "h_332,q_70,w_271");
   imgTag.style.height = "auto";
   imgTag.style.width = "100%";
 
